@@ -22,13 +22,29 @@ The strucutre of the network is presented below, and is implemented in Tensorflo
 The time series data is preprocessed by using windowing as well as applying moving average over the time series, next the data is feed into the Encoder part of the model which learns the compressed representation of the data. In the next step Decoder structures in exact same way as Encoder is used to decode the signal.
 
 <div align="center">
-  <img src="https://github.com/danielstankw/Anomaly-Detection/assets/72759092/a368b454-b62c-4cdc-978f-f4b7d294b79c" width="700">
+  <img src="https://github.com/danielstankw/Anomaly-Detection/assets/72759092/a368b454-b62c-4cdc-978f-f4b7d294b79c" width="500">
 </div>
 
 
 ## Training and Testing of the Model.
-![image](https://github.com/danielstankw/Anomaly-Detection/assets/72759092/76da597b-aada-4bb3-a6eb-d394ba605e39)
-## Results
-![image](https://github.com/danielstankw/Anomaly-Detection/assets/72759092/1b225097-e5f3-4d85-90a9-a2e2e42264f1)
+1. Training
+A normal data without anomalies is used for training. First the data is preprocessed and then feed into the model. The model learns to reconstruct the normal data and then a decission threshold is chosen based on it
 
-![image](https://github.com/danielstankw/Anomaly-Detection/assets/72759092/5c865cc1-ad2b-4de5-9bff-247bef43a14b)
+2. Tesitng
+A data that includes anomalies is passed through the network. When an anomaly is detected model is unable to reconstruct the signal well (it was trained on normal data only) therefore the reconstruction error will be significantly larger than for normal data. This is the indicator of anomaly being present.
+
+<div align="center">
+  <img src="https://github.com/danielstankw/Anomaly-Detection/assets/72759092/76da597b-aada-4bb3-a6eb-d394ba605e39" width="700">
+</div>
+
+## Results
+
+<div align="center">
+  <img src="https://github.com/danielstankw/Anomaly-Detection/assets/72759092/1b225097-e5f3-4d85-90a9-a2e2e42264f1" width="700">
+</div>
+
+
+<div align="center">
+  <img src="https://github.com/danielstankw/Anomaly-Detection/assets/72759092/5c865cc1-ad2b-4de5-9bff-247bef43a14b" width="700">
+</div>
+
