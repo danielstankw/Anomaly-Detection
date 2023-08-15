@@ -1,9 +1,11 @@
 # Anomaly Detection Using LSTM-Autoencoder 
 This repo contains files related to implementation of LSTM Autoencoder for anomaly detection using Tensorflow.
 
-## File Content:
-* sacsad
-* dasad
+## Important Files:
+* `LSTM_Autoencoder_TRAINING`: File for training LSTM-Autoencoder
+* `LSTM_Autoencoder_TESTING` : file for testing
+* `DataAnalyzer`: file for preprocessing the data and data analysis/ visualization
+* `DNN_Classifier` : implementation of binary classifier (initial attempt to solve the problem)
 
 ## Task Explanation
 The goal was to detect a partial overlap between peg and a hole in a robotic assembly task. </br>
